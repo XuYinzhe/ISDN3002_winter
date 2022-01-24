@@ -1,43 +1,22 @@
-import React from 'react';
-import { Button, Tooltip } from 'antd';
-import { IdcardOutlined } from '@ant-design/icons';
-import logo1 from './logo-icon.png';
+import React, { Component } from 'react';
+import { Button, Image } from 'antd';
+import { LeftOutlined, IdcardOutlined } from '@ant-design/icons';
 
-import { Input, Space } from 'antd';
-import { AudioOutlined } from '@ant-design/icons';
-import ReactDOM from 'react-dom';
-
-const { Search } = Input;
-
-const suffix = (
-  <AudioOutlined
-    style={{
-      fontSize: 16,
-      color: '#1890ff',
-    }}
-  />
-);
-
-const onSearch = value => console.log(value);
-
-const home = () =>{
-  return (
-    <div>
-      <header>
-        <img src={logo1} className="App-logo" alt="logo1"/>
-      </header>
-      <Tooltip title="search">
-        <Button shape="circle" icon={<IdcardOutlined />} size="large" />
-      </Tooltip>
-
-      <Space direction="vertical">
-        <Search placeholder="input search text" onSearch={onSearch} style={{ width: 200 }} />
-        <Search placeholder="input search text" allowClear onSearch={onSearch} style={{ width: 200 }} />
-        <Search placeholder="input search text" onSearch={onSearch} enterButton />
-      </Space>
-    </div>
-
-    
-  );
+class LTA extends Component{
+  render(){
+    return(
+      <div>
+        <Button icon={<LeftOutlined />} size="large" href="https://www.google.com" />
+        <Button icon={<IdcardOutlined />} size="large" href="https://www.google.com" />
+        <Image
+          width={500}
+          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+        />
+        LTA
+        Academic Building, 1/F
+        <Button>ENTER</Button>
+      </div>
+    )
+  }
 }
-export default home;
+export default LTA

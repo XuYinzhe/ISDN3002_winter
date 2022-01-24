@@ -2,15 +2,23 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import LTA from './pages/LTA';
+import LTA_I from './pages/LTA-I';
+
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { UserOutlined, SearchOutlined } from '@ant-design/icons';
 
 ReactDOM.render(
+  <Router>
+    <App path="/">
+      <LTA path="LTA">
+        <LTA_I path="LTA_I" />
+      </LTA>
+    </App>
+  </Router>,
   
-  <App />,
-
   document.getElementById('root'),
 
 );

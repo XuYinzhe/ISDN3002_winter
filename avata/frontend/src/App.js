@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { Button, Tooltip, Input, Divider } from 'antd';
 import { IdcardOutlined, SearchOutlined } from '@ant-design/icons';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import login from './pages/login';
-import home from './pages/lta'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import LTA from './pages/LTA';
 import ReactDOM, { render } from 'react-dom';
-import { Components } from 'antd/lib/date-picker/generatePicker';
+import { Link, useNavigate } from 'react-router-dom';
+
+function Redirect() {
+  let navigate = useNavigate();
+  function handleClick() {
+    navigate('/LTA');
+  }
+}
 
 class App extends Component {
+
   render(){
     return (  
       <div>
@@ -19,7 +25,7 @@ class App extends Component {
         <Divider orientation="left" orientationMargin="0">
         Room List
         </Divider>
-          <Button type="text">
+          <Button type="text" onClick={Redirect}>
             LTA
           </Button>
         <Divider />
@@ -87,8 +93,7 @@ class App extends Component {
       </div>
     );
   }
-  
 }
 
-
 export default App
+

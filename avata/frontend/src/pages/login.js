@@ -1,5 +1,5 @@
 import React from 'react';
-const login = () =>{
+class login extends Component{
   return (
     <div>
       <h3>Login</h3>
