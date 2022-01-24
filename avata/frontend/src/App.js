@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Tooltip, Input, Divider } from 'antd';
-import { IdcardOutlined, SearchOutlined } from '@ant-design/icons';
+import { UserOutlined, SearchOutlined } from '@ant-design/icons';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import LTA from './pages/LTA';
@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 function Redirect() {
   let navigate = useNavigate();
   function handleClick() {
-    navigate('/LTA');
+    navigate("http://localhost:3000/LTA")
   }
 }
 
@@ -20,7 +20,7 @@ class App extends Component {
     return (  
       <div>
         <Input size="large" placeholder="Search room" prefix={<SearchOutlined />} />
-        <Button icon={<IdcardOutlined />} size="large" href="https://www.google.com" />
+        <Button icon={<UserOutlined />} size="large" href="https://www.google.com" />
         <>
         <Divider orientation="left" orientationMargin="0">
         Room List
