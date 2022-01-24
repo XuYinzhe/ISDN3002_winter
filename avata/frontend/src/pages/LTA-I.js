@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Image, Radio, Input, Space} from 'antd';
 import { LeftOutlined, UserOutlined } from '@ant-design/icons';
+import Photo from './IMG_6782.JPG'
 
 class LTA_I extends Component{
     state = {
@@ -22,21 +23,23 @@ class LTA_I extends Component{
                 <Button icon={<LeftOutlined />} size="large" href="https://www.google.com" />
                 <Button icon={<UserOutlined />} size="large" href="https://www.google.com" />
                 <Image
-                    width={500}
-                    src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                    width={1600}
+                    src={Photo}
                 />
 
                 <div>
                     Do you bring personal device?
                 </div>
+                <br />
                 <Radio.Group onChange={this.onChange} value={value}>
-                    <Space direction="vertical">
+                    <Space direction="horizontal">
                         <Radio value={1}>Windows</Radio>
                         <Radio value={2}>Apple device</Radio>
                         <Radio value={3}>None</Radio>
                     </Space>
                 </Radio.Group>
-
+                <br />
+                <br />
                 <Button>FINISH</Button>
             </div>
     )

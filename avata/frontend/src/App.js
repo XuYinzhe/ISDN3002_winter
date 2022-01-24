@@ -1,31 +1,34 @@
 import React, { Component } from 'react';
-import { Button, Tooltip, Input, Divider } from 'antd';
+import { Button, Tooltip, Input, Divider, Space } from 'antd';
 import { UserOutlined, SearchOutlined } from '@ant-design/icons';
 import './App.css';
+import logo from './pages/logo-icon.png'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import LTA from './pages/LTA';
 import ReactDOM, { render } from 'react-dom';
 import { Link, useNavigate } from 'react-router-dom';
 
-function Redirect() {
-  let navigate = useNavigate();
-  function handleClick() {
-    navigate("http://localhost:3000/LTA")
-  }
-}
 
 class App extends Component {
 
   render(){
     return (  
       <div>
-        <Input size="large" placeholder="Search room" prefix={<SearchOutlined />} />
-        <Button icon={<UserOutlined />} size="large" href="https://www.google.com" />
+        <br />
+        <img src={logo} className="App-logo" alt="logo" />
+        
+        <br />
+        <br />
+        <Space direction="horizontal">
+          <Input size="large" placeholder="Search room" prefix={<SearchOutlined />} style={{ width: 1380 }} />
+          <Button icon={<UserOutlined />} size="large" href="https://www.google.com" />
+        </Space>
+
         <>
         <Divider orientation="left" orientationMargin="0">
         Room List
         </Divider>
-          <Button type="text" onClick={Redirect}>
+          <Button type="text">
             LTA
           </Button>
         <Divider />

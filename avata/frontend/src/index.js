@@ -6,12 +6,17 @@ import LTA from './pages/LTA';
 import LTA_I from './pages/LTA-I';
 import Login from './pages/login';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import { BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { UserOutlined, SearchOutlined } from '@ant-design/icons';
+import { render } from "react-dom";
 
-ReactDOM.render(
-  <Login />,
+
+render(
+  <BrowserRouter>
+    <LTA_I />
+  </BrowserRouter>,
+  //<Login />,
   //<App />,
   //<LTA />,
   //<LTA_I />,
