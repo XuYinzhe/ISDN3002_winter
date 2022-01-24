@@ -30,11 +30,11 @@ const selectBefore = (
   );
 
 const Login = () => {
-    const [mode, setMode] = React.useState('inline');
+    const [mode, setMode] = React.useState('horizontal');
     const [theme, setTheme] = React.useState('light');
 
         return (
-            <div>
+            <div style={{ marginLeft: 50 }}>
                 <Button icon={<LeftOutlined />} size="large" href="https://www.google.com" />
                 <br />
                 <br />
@@ -51,14 +51,13 @@ const Login = () => {
                 <Menu
                     style={{ width: 350 }}
                     defaultSelectedKeys={['1']}
-                    defaultOpenKeys={['sub1']}
                     mode={mode}
                     theme={theme}
                 >
-                    <Menu.Item key="1" icon={<UserOutlined />}>
+                    <Menu.Item key="1" icon={<UserOutlined />} style={{ width: '50%' }} >
                         User
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<UserAddOutlined />}>
+                    <Menu.Item key="2" icon={<UserAddOutlined />} style={{ width: '50%' }} >
                         Guest
                     </Menu.Item>
                 </Menu>
