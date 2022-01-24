@@ -5,7 +5,7 @@ import { IdcardOutlined, SearchOutlined } from '@ant-design/icons';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import login from './pages/login';
-import home from './pages/home'
+import home from './pages/lta'
 import ReactDOM, { render } from 'react-dom';
 import { Components } from 'antd/lib/date-picker/generatePicker';
 
@@ -19,37 +19,70 @@ class App extends Component {
         <Divider orientation="left" orientationMargin="0">
         Room List
         </Divider>
-          <p>LTA</p>
+          <Button type="text">
+            LTA
+          </Button>
         <Divider />
-          <p>LTB</p>
+          <Button type="text">
+            LTB
+          </Button>
         <Divider />
-          <p>LTC</p>
+          <Button type="text">
+            LTC
+          </Button>
         <Divider />
-          <p>LTD</p>
+          <Button type="text">
+            LTD
+          </Button>
         <Divider />
-          <p>LTE</p>
+          <Button type="text">
+            LTE
+          </Button>
         <Divider />
-          <p>LTF</p>
-          <Divider />
-          <p>LTG</p>
+          <Button type="text">
+            LTF
+          </Button>
         <Divider />
-          <p>LTH</p>
+          <Button type="text">
+            LTG
+          </Button>
         <Divider />
-          <p>LTI</p>
+          <Button type="text">
+            LTH
+          </Button>
         <Divider />
-          <p>LTJ</p>
+          <Button type="text">
+            LTI
+          </Button>
         <Divider />
-          <p>LTK</p>
-          <Divider />
-          <p>Room 1006</p>
+          <Button type="text">
+            LTJ
+          </Button>
         <Divider />
-          <p>Room 2300</p>
+          <Button type="text">
+            LTK
+          </Button>
         <Divider />
-          <p>Room 3200</p>
+          <Button type="text">
+            Room 1006
+          </Button>
         <Divider />
-          <p>Room 4002</p>
+          <Button type="text">
+            Room 2300
+          </Button>
         <Divider />
-          <p>Room 4223</p>
+          <Button type="text">
+            Room 3200
+          </Button>
+        <Divider />
+          <Button type="text">
+            Room 4002
+          </Button>
+        <Divider />
+          <Button type="text">
+            Room 4223
+          </Button>
+        <Divider />
         </>
       </div>
     );
